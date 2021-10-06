@@ -4,10 +4,9 @@ body{
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-image: linear-gradient(to right, #ffd89b ,#19547b);
 }
 
-.container{
+.box{
   max-width: 700px;
   width: 100%;
   background-color: #fff;
@@ -15,11 +14,10 @@ body{
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
-
-
-.container.s1
-{
-    font-size: 20px;
-    font-weight: 500;
-    width:5%;
+.box.pic{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
