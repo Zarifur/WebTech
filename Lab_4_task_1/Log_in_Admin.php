@@ -1,47 +1,26 @@
 <?php
-$masage= $masage2 = "";
-$name = $pass = "" ;
+ session_start();
+$masage=  $masage3 = $masage2 = "";
+$uname = $pass = "" ;
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-	$name=$_POST["name"];
+	$uname=$_POST["uname"];
 	$pass=$_POST["pass"];
-	// $uname=$data["name"];
-	// $upass=$data["pass"];
 
 
-
-
-     // foreach($data as $row)  
-     //  {
-     //  	// if ($row["name"] == $name && $row["pass"] == $pass)
-     //  	if((strcasecmp($name, $row["name"]) ==1) && (strcasecmp($pass, $row["pass"])==1))
-     //  	{
-     //  		$masage="login successful"; 
-     //  	}
-     //  }  
-     // if((strcasecmp($name, $data["name"]) ==1) && (strcasecmp($pass, $data["pass"])==1))
-     // {
-     	
-     // }
-     // else
-     // {
-     // 	$masage="invalid user or password";
-     // }
-
-
-     if (empty($_POST["name"])) 
+     if (empty($_POST["uname"])) 
      {
-     	$masage="name is empty";
+     	$masage="Username is empty";
      }
      else
      {
-     	if (strlen($name) <3) 
+     	if (strlen($uname) <3) 
      	{
      		$masage="name must more then 2 characters";
      	}
      	else
      	{
-     		if(preg_match( '/^[A-Za-z\s._-]+$/', $name)!==1)
+     		if(preg_match( '/^[A-Za-z\s._-]+$/', $uname)!==1)
      		{
               $masage ="Name can contain letter,desh,dot and space";  
             }
@@ -74,22 +53,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
       foreach($data as $row)  
       { 
 
-           if ($_POST["name"]==$row["name"]&& $_POST["pass"]==$row["pass"]) {
-     	
-         	header("location:log_home.php");
-            }
+          if ($_POST["uname"]==$row["uname"]&& $_POST["pass"]==$row["pass"]) 
+          {
+              
+              
+              $_SESSION['name'] = $row["name"];
+              $_SESSION['email'] = $row["email"];
+              $_SESSION['uname'] = $row["uname"];
+              $_SESSION['pass'] = $row["pass"];
+              $_SESSION['dob'] = $row["dob"];
+              $_SESSION['gender']=$row["gender"];
+              $_SESSION['picture']=$row["picture"];
+          	header("location:testborrd.php");
+	     }
+	     else
+	     {
+	     	$masage3 = "name or password is incorrect!!!!";
+	     }
       
       }
-
-
-
-
-     
-
-
-
-     
-
 
 }
 ?>
@@ -113,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			<div >
 			<label>
 				User Name:<br>
-				<input type="text" name="name" value="<?php echo $name;?>">
+				<input type="text" name="uname" value="<?php echo $uname;?>">
 				 <span style="color: red">* <?php echo $masage;?></span>
 			</label>
 		</div>
@@ -133,9 +115,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 		<div>
 			<input type="submit" name="submit">
 		</div>
-		<?php
-		//echo $masage;
-		?>
+		<span style="color: red">* <?php echo $masage3;?></span>
 		<div>
 			<a href="pass.php">Forgot Password</a>
 		</div>
