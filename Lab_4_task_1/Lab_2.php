@@ -117,7 +117,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
              'uname'      =>     $_POST["uname"],
              'pass'       =>     $_POST["pass"],   
              'dob'        =>     $_POST["dob"],
-             'gender'     =>     $_POST["gender"]
+             'gender'     =>     $_POST["gender"],
+             'picture'    =>     "dfult.png"
         );  
         $array_data[] = $extra;  
         $final_data = json_encode($array_data);  

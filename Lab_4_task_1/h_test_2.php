@@ -12,7 +12,7 @@
     <a href="" class="fixedw"><p><b>wellcome</b></p></a>
     <a class="active" href=""><?php echo $_SESSION['name'];?></a>
     <a href="Logout.php" >Logout</a>
-    <a href="" class="login"><img src="dfult.png" height="50" width="50"></a>
+    <a href="" ><img src="<?php echo $_SESSION['picture'];?>" height="50" width="50"></a>
   </div>
 </div>
 
