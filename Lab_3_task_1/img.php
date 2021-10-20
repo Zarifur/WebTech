@@ -30,7 +30,7 @@
 	}
 
 	// Check file size
-	if ($_FILES["Upload"]["size"] > 500000) {
+	if ($_FILES["Upload"]["size"] > 50000000000) {
 	  echo "Sorry, your file is too large.";
 	  $uploadOk = 0;
 	}
@@ -46,7 +46,9 @@
 	if ($uploadOk == 0) {
 	  echo "Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
-	} else {
+	} 
+	else 
+	{
 	  if (move_uploaded_file($_FILES["Upload"]["tmp_name"], $target_file)) {
 	    echo "The file ". htmlspecialchars( basename( $_FILES["Upload"]["name"])). " has been uploaded.";
 	    $imp="<img src=".$target_file ." height=200 width=300 />";

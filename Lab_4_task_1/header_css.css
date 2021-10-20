@@ -79,3 +79,18 @@ body {
   right: 250px;
 
 }
+
+.fixed_footer {
+  position: fixed;
+  bottom: 0px;
+/*  right: 250px;*/
+
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background:transparent;
+  color: Black;
+  width: 100%;
+}

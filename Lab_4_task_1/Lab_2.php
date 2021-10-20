@@ -1,5 +1,5 @@
 <?php
-$nameErr = $emailErr = $dobErr =  $unErr = $passErr = $message = $genderErr = ""  ;
+$nameErr = $emailErr =  $dobErr =  $unErr = $passErr = $message = $genderErr = ""  ;
 $name = $email = $dob = $uname = $pass = $pass2 = $gender= "";
 
 

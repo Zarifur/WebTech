@@ -18,6 +18,13 @@
 <div style="text-align: center;">
   <h1><b>welcome to ____________ company.</b></h1>
 </div>
+<div>
+  <footer class="fixed_footer">
+  <p>Author: Zarif Amir Sanad<br>
+  <a href="">Zarifsanad@gmail.com</a></p>
+  </footer>
+</div>
+
 
 </body>
 </html>

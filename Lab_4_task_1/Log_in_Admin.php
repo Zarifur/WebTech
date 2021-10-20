@@ -22,8 +22,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      	{
      		if(preg_match( '/^[A-Za-z\s._-]+$/', $uname)!==1)
      		{
-              $masage ="Name can contain letter,desh,dot and space";  
-            }
+          $masage ="Name can contain letter,desh,dot and space";  
+        }
      	}
 
      }
@@ -44,6 +44,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      			$masage2= "must contain #$%@ any of this characters ";
      		}
      	}
+     }
+     if (!empty($_POST['remember'])) 
+     {
+	      setcookie("uname", $_POST['uname'], time() + 10);
+	      setcookie("pass", $_POST['pass'], time() + 10);
      }
 
 
@@ -95,20 +100,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			<div >
 			<label>
 				User Name:<br>
-				<input type="text" name="uname" value="<?php echo $uname;?>">
+				<input type="text" name="uname" value="<?php if (isset($_COOKIE['uname'])) {echo $_COOKIE['uname'];} else {echo $uname;}?>">
 				 <span style="color: red">* <?php echo $masage;?></span>
 			</label>
 		</div>
 		<div>
 			<label>
 				Password:<br>
-				<input type="Password" name="pass" value="<?php echo $pass;?>">
+				<input type="Password" name="pass" value="<?php if (isset($_COOKIE['pass'])) {echo $_COOKIE['pass'];} else {echo $pass;}?>">
 				<span style="color: red">* <?php echo $masage2;?></span>
 			</label>
 		</div>		
 		<div>
 			<label>
-				<input type="checkbox" name="remamber">
+				<input type="checkbox" name="remember">
 				Remamber Me
 			</label>
 		</div>

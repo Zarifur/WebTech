@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 			<a href="View_profile.php" class="button">View Profile</a>
 			<a href="edit_profile.php" class="button">Edit Profile</a>
 			<a href="profile_pic.php" class="button">Change profile pic</a>
-			<a href="#" class="button">Change Password</a>
+			<a href="check_password.php" class="button">Change Password</a>
 			<a href="Logout.php" class="button">logout</a>
 		</div>
 		<div class="tbord2 fixed2">

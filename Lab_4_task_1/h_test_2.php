@@ -9,12 +9,19 @@
 <div class="header">
   <a href="#default" class="logo" style="text-align: left;">CompanyLogo</a>
   <div class="header-right" style="text-align: right;">
-    <a href="" class="fixedw"><p><b>wellcome</b></p></a>
-    <a class="active" href=""><?php echo $_SESSION['name'];?></a>
+    <span><a href="">wellcome &emsp; <?php echo $_SESSION['name'];?></a></span>
     <a href="Logout.php" >Logout</a>
-    <a href="" ><img src="<?php echo $_SESSION['picture'];?>" height="50" width="50"></a>
+    <a style="padding: 0px 0px;" href="" ><img src="<?php echo $_SESSION['picture'];?>" height="60" width="60"></a>
   </div>
 </div>
+
+<div>
+  <footer class="fixed_footer">
+  <p>Author: Zarif Amir Sanad<br>
+  <a href="">Zarifsanad@gmail.com</a></p>
+  </footer>
+</div>
+
 
 </body>
 </html>
