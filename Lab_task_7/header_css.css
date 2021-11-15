@@ -1,0 +1,115 @@
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  overflow: hidden;
+   background:blue;
+  /*background: linear-gradient(to right,#00ccff ,#99ff99);*/
+/*  padding-top:0;
+  padding-bottom:0;*/
+  color:#fff;
+  border-radius:0;
+  box-shadow:none;
+  border:none;
+  padding: 10px 5px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+}
+
+.header a:hover {
+  color: #B2FFFF;
+  text-shadow:  0 0 10px  #B2FFFF;
+}
+
+.header a.active {
+
+  color: blue;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) 
+{
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+/*.login:hover 
+{
+  color:black;
+}*/
+.header.login {
+  color:#d9d9d9;
+  margin-right:.5rem;
+  text-decoration:none;
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+.fixedw {
+  position: fixed;
+  bottom: 715px;
+  right: 250px;
+
+}
+
+.fixed_footer {
+  position: fixed;
+  bottom: 0px;
+/*  right: 250px;*/
+
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background:transparent;
+  color: Black;
+  width: 100%;
+}
+
+.tbord {
+  background-color: transparent;
+  width: 290px;
+  height: 620px;
+  border: transparent;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 80px;
+  right: 1230px;
+  box-shadow:  0 0 10px  #B2FFFF;
+}
