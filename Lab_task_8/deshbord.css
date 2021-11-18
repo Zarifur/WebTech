@@ -1,0 +1,132 @@
+body
+{
+  
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background: linear-gradient(to right, #a7a9b1 ,#2c3e50);
+}
+.tbord {
+  background-color: transparent;
+  width: 290px;
+  height: 620px;
+  border: transparent;
+  padding: 5px;
+  margin: 5px;
+}
+.tbord2 {
+  background-color: transparent;
+  width: 1100px;
+  height: 620px;
+/*  border: 5px solid green;*/
+  border: transparent;
+  padding: 50px;
+  margin: 5px;
+}
+
+.button {
+  background-color: #B0C4DE;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+
+}
+.button:hover
+{
+box-shadow:  0 0 10px  #B2FFFF;
+/*box-shadow:  0 0 5px #B0C4DE  ;
+background-color: #B2FFFF ;*/
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 80px;
+  right: 1230px;
+  box-shadow:  0 0 10px  #B2FFFF;
+}
+.fixed2 {
+  position: fixed;
+  bottom: 80px;
+  right: 120px;
+  box-shadow:  0 0 10px  #B2FFFF;
+}
+
+.container{
+  width: 570px;
+  height: 500px;
+  background-color: transparent;
+  padding: 25px 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  color: whitesmoke;
+
+
+}
+
+.button1 {
+  background-color: #B0C4DE;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 30%;
+
+}
+
+.button1:hover
+{
+box-shadow:  0 0 5px  #B2FFFF;
+}
+.pbord {
+  background-color: transparent;
+  width: 250px;
+  height: 200px;
+  border: red;
+  padding: 5px;
+  margin: 5px;
+}
+.pfixed {
+  position: fixed;
+  bottom: 405px;
+  right: 550px;
+ /* box-shadow:  0 0 10px  #B2FFFF;*/
+}
+
+.test2
+{
+  color: whitesmoke;
+    height: 30px;
+    background: 0 0;
+    padding: 0 5px;
+    border-top: hidden;
+    border-right: hidden;
+    border-left: hidden;
+    border-bottom: 2px solid #B2FFFF;
+    outline: none;
+    font-size: 15px;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ADB3BC;
+}
